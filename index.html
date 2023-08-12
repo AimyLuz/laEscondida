@@ -123,14 +123,14 @@ let mapa = [
         premios = document.querySelectorAll('.premio');
 
         let score = premios.length;
-        scoreElement.setAttribute('value',`Lihuel se perdio en venecia, Econcontrala ${score} veces `);
+        scoreElement.setAttribute('value',`Juguemos a las escondidas, Econcontra ${score} veces a Lihuel `);
         scoreElement.setAttribute('color', '#000');
 
         premios.forEach(premio => {
             premio.addEventListener('click', ()=> {
                 premio.setAttribute('visible', false)
                 score -= 1;
-                scoreElement.setAttribute('value', `Encontraste ${score} veces a Mai`);
+                scoreElement.setAttribute('value', `Encontra ${score} veces mas a Lihuel`);
                 if (score <= 0) {
                     scoreElement.setAttribute('value', "Encontraste en todos lados a Lihuel ¡GANASTE!")
                 }
